@@ -1,0 +1,85 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Sign up failed!</h1>
+            <div class="alert alert-danger"> <strong>Sorry!</strong> {{ message }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> Please sign Up</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="/signup" method="post">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="" name="un" class="form-control" placeholder="root">
+                            <p class="help-block">Input: root</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="pw" class="form-control" placeholder="Password">
+                            <p class="help-block">Input: 123</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video">Exhibition space</h3>
+                </div>
+                <!--<div class="panel-body">
+                    <video width="100%" controls="controls">
+                        <source src="https://github.com/michaelliao/learn-javascript/raw/master/video/vscode-nodejs.mp4">
+                    </video>
+                </div>-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>More things...</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Unified authentication system</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Connect each part through JSON</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Cache server</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Open only when needed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">TodoList</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Memorandum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

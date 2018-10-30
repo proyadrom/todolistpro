@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Node.JS + Koa + Nunjucks TEST">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/master.css">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/popper.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/master.js"></script>
+</head>
+
+<body>
+    <!--
+    <header class="navbar navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">Test</a>
+            </div>
+            <nav class="collapse navbar-collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a target="_blank" href="www.iceyea.com"></a></li>
+                    <li><a target="_blank" href="download.iceyea.com"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    -->
+    <div id="important" style="color:#cdbfe3; background-color:#1c9998; padding:30px 0; margin:-20px 0 20px 0;">
+        <div class="container">
+            <h1 style="color:#fff; font-size:60px">ICEYEA</h1>
+        </div>
+    </div>
+    {% block main %} {% endblock %}
+    <footer style="background-color:#ddd; padding: 20px 0;">
+        <div class="container">
+            <p>
+                <a target="_blank" href="https://www.iceyea.com">Website</a> -
+                <a target="_blank" href="http://download.iceyea.com">Download Server</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="page-header">
+        <h1>Todo List
+            <small>/<a href="./todolist">index</a>/detail/</small>
+        </h1>
+    </div>
+    <form class="form-horizontal" action="/detail" method="post">
+        <div class="form-group">
+            <label for="ID" class="col-sm-2 control-label">ID</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ID" name="id" value="{{ work.TID }}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="brief" class="col-sm-2 control-label">Brief</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="brief" name="brief" value="{{ work.brief }}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="detail" class="col-sm-2 control-label">Detail</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="detail" rows="5" name="detail">{{ work.detail }}</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-info" id="normal">Normal</button>
+                <button type="button" class="btn btn-success" id="completed">Completed</button>
+                <button type="button" class="btn btn-danger" id="delete">Delete</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="statuss" class="col-sm-2 control-label">Status</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="statuss" name="status" value="{{ work.status }}" readonly>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Update it!</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var statuss = document.getElementById("statuss");
+    var normal = document.getElementById("normal");
+    normal.onclick =function (){
+        statuss.value = "Open";
+    };
+    var completed = document.getElementById("completed");
+    completed.onclick =function (){
+        statuss.value = "Completed";
+    };
+    var deleted = document.getElementById("delete");
+    deleted.onclick =function (){
+        statuss.value = "Deleted";
+    }
+</script>
+{% endblock %}

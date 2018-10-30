@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="page-header">
+        <h1>Todo List
+            <small>/index/</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/create"><div class="btn btn-primary">Create</div></a>
+            <p></p>
+        </div>
+        {% if noWork %}
+        <div class="col-md-12">
+            <div class="alert alert-warning">There is nothing to do. Try to create one.</div>
+        </div>
+        {% else %}
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Brief</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Status</th>
+            </tr>
+            {% for w in workOpen %}
+            <tbody>
+                    <tr>
+                        <td><a href="/detail/{{ w.TID }}">{{ w.brief }}</a></td>
+                        <td>{{ w.startTime }}</td>
+                        <td>{{ w.endTime }}</td>
+                        <td>{{ w.status }}</td>
+                    </tr>
+            </tbody>
+            {% endfor %}
+            {% for w in workCompleted %}
+            <tbody>
+            <tr>
+                <td><a href="/detail/{{ w.TID }}">{{ w.brief }}</a></td>
+                <td>{{ w.startTime }}</td>
+                <td>{{ w.endTime }}</td>
+                <td>{{ w.status }}</td>
+            </tr>
+            </tbody>
+            {% endfor %}
+            </thead>
+        </table>
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

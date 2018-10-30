@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-user"></span> Please Sign Up</h3>
+                </div>
+                <div class="panel-body">
+                    <form action="/signup" method="post">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="" name="un" class="form-control" placeholder="root">
+                            <p class="help-block">Input: root</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="pw" class="form-control" placeholder="Password">
+                            <p class="help-block">Input: 123</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                        <a href="/signin" class="btn btn-primary">Or sign in</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-hd-video">Note</h3>
+                </div>
+                <div class="panel-body">
+                    <p>This is just an example. Your data will be stored in clear text, <strong>not using common passwords.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+</div>
+{% endblock %}
